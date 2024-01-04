@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import './components/navbar'; 
-import Navbar from './components/navbar';
+import './components/navbar';
+import HeroSection from './components/hero-section'; 
+// import Navbar from './components/navbar';
 export default function App() {
   return (
    <>
-    <Navbar />
+    {/* <Navbar /> */}
     <div className="App">
-      <p className="text-3xl font-bold underline">App</p>
+      <HeroSection />
     </div> 
    </>
   )
