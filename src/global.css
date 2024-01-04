@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,12 +7,16 @@
 @layer base{
     :root{
         --color-primary: #E62C36;
+        font-family: 'Raleway', sans-serif;
+    }
+    h1{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    h2{
+        font-size: 32px;
+    }
+    p{
+        font-size: 16px;
     }
 }
-#error-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
