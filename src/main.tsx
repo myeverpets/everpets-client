@@ -7,6 +7,7 @@ import {
 import './global.css';
 import App from './App.tsx';
 import ErrorPage from "./pages/error-page";
+import Navbar from './components/navbar';
 
 
 
@@ -20,6 +21,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
+    <Navbar />
     <RouterProvider router={router} />
   </React.StrictMode>,
 )
