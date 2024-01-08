@@ -1,1 +1,1 @@
-## EverPets client
+## Everpets Client
