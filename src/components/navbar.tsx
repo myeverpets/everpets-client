@@ -73,13 +73,13 @@ export default function Navbar() {
                     <span className="sr-only">Log in</span>
                 </button>
                 <button
-                  type="button"
-                  className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
-                  >
-                    <a href="/signup" className='text-base font-semibold px-2 py-1'>Sign up</a>
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">Sign up</span>
-                  </button>
+                type="button"
+                className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
+                >
+                  <a href="/signup" className='text-base font-semibold px-2 py-1'>Sign up</a>
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">Sign up</span>
+                </button>
 
                 
               </div>
