@@ -2,7 +2,7 @@ import { PiDogLight, PiCatLight, PiAlienLight } from "react-icons/pi";
 
 export default function Category() {
     return (
-        <div className="max-w-[91%] py-6 mx-auto">
+        <div className="max-w-[91%] py-32 mx-auto">
             <div className="text-center">
                 <h1>Category</h1>
             </div>

@@ -1,6 +1,6 @@
-import logo from '../assets/logo.png'
-import { Disclosure} from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import logo from '../assets/logo.png';
+import { Disclosure } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const navigation = [
   { name: 'About us', href: '#', current: false },
@@ -8,7 +8,7 @@ const navigation = [
   { name: 'Out stories', href: '#', current: false },
   { name: 'Categories', href: '#', current: false },
   { name: 'Contact', href: '#', current: false },
-]
+];
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
@@ -36,11 +36,7 @@ export default function Navbar() {
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
                   <a href="#">
-                    <img
-                      className="h-12 w-auto"
-                      src={logo}
-                      alt="EverPets"
-                    />
+                    <img className="h-12 w-auto" src={logo} alt="EverPets" />
                   </a>
                 </div>
                 <div className="hidden sm:ml-44 sm:flex items-end ">
@@ -50,8 +46,10 @@ export default function Navbar() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-100 text-white' : 'text-black',
-                          'rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md'
+                          item.current
+                            ? 'bg-gray-100 text-white'
+                            : 'text-black',
+                          'rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md',
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
@@ -68,20 +66,28 @@ export default function Navbar() {
                   className="relative rounded-lg bg-white p-2 hover:bg-gray-100 text-rede hover:text-red-600 
                   text-base fond-bold"
                 >
-                    <a href="/login" className='text-base font-semibold px-2 py-1'>Log in</a>
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">Log in</span>
+                  <a
+                    href="/login"
+                    className="text-base font-semibold px-2 py-1"
+                  >
+                    Log in
+                  </a>
+                  <span className="absolute -inset-1.5" />
+                  <span className="sr-only">Log in</span>
                 </button>
                 <button
-                type="button"
-                className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
+                  type="button"
+                  className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
                 >
-                  <a href="/signup" className='text-base font-semibold px-2 py-1'>Sign up</a>
+                  <a
+                    href="/signup"
+                    className="text-base font-semibold px-2 py-1"
+                  >
+                    Sign up
+                  </a>
                   <span className="absolute -inset-1.5" />
                   <span className="sr-only">Sign up</span>
                 </button>
-
-                
               </div>
             </div>
           </div>
@@ -94,12 +100,14 @@ export default function Navbar() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-white text-gray-900' : 'text-black text-base hover:text-white',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? 'bg-white text-gray-900'
+                      : 'text-black text-base hover:text-white',
+                    'block rounded-md px-3 py-2 text-base font-medium',
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
-                  {item.name} 
+                  {item.name}
                 </Disclosure.Button>
               ))}
             </div>
@@ -107,5 +115,5 @@ export default function Navbar() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }
