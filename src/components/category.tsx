@@ -6,16 +6,16 @@ export default function Category() {
       <div className="text-center">
         <h1>Category</h1>
       </div>
-      <div className="grid grid-cols-3 gap-4 h-80 px-24 py-4">
-        <button className="col-span-1 bg-white drop-shadow-lg rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px]">
+      <div className="grid grid-cols-3 gap-20 h-80 px-32 py-4">
+        <button className="col-span-1 bg-white drop-shadow-lg rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px] hover:bg-gray-100">
           <PiDogLight className="size-40 content-center" />
           <h2 className="font-bold text-center">Dogs</h2>
         </button>
-        <button className="col-span-1 bg-white drop-shadow-lg rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px]">
+        <button className="col-span-1 bg-white drop-shadow-lg rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px] hover:bg-gray-100">
           <PiCatLight className="size-40 content-center" />
           <h2 className="font-bold text-center">Cats</h2>
         </button>
-        <button className="col-span-1 bg-white drop-shadow-lg rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px]">
+        <button className="col-span-1 bg-white drop-shadow-lg rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px] hover:bg-gray-100">
           <PiAlienLight className="size-40 content-center" />
           <h2 className="font-bold text-center">Others</h2>
         </button>
