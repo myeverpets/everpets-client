@@ -1,4 +1,3 @@
-import { require } from 'flowbite/plugin';
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -12,6 +11,7 @@ export default {
         rede: '#E62C36',
         blacke: '#191919', 
       },
+      
       dropShadow: {
         lgL: [
           '0 10px 8px rgb(255, 255, 255, 0.04)',
@@ -24,5 +24,7 @@ export default {
       darkMode: 'class',
     },
   },
+  variants: {},
   plugins: [require('flowbite/plugin')],
 };
+
