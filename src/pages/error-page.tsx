@@ -1,5 +1,6 @@
 import { useRouteError } from 'react-router-dom';
 import animation from '../assets/404.gif';
+import Navbar from '../components/navbar';
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -7,6 +8,7 @@ export default function ErrorPage() {
 
   return (
     <>
+      <Navbar />
       <main className="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center">
           <img src={animation}></img>

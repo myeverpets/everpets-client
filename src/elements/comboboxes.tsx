@@ -70,10 +70,12 @@ export function Combobox_country() {
     <>
       <Combobox value={selected_country} onChange={setSelected_country}>
         <div className="relative mt-1">
-          <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+          <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white dark:bg-blacke dark:text-white text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <Combobox.Input
-              className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
-              displayValue={(nation: { title: string }) => nation.title}
+              className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 dark:text-white focus:ring-0 dark:bg-blacke"
+              displayValue={(nation: { title: string }) =>
+                selected_country ? nation.title : 'Select'
+              }
               onChange={(event) => setQuery(event.target.value)}
             />
             <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -90,7 +92,7 @@ export function Combobox_country() {
             leaveTo="opacity-0"
             afterLeave={() => setQuery('')}
           >
-            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+            <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-blacke dark:text-white  py-1 text-base shadow-lg dark:drop-shadow-lgL ring-1 ring-black/5 focus:outline-none sm:text-sm">
               {filteredCountry.length === 0 && query !== '' ? (
                 <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
                   Nothing found.
@@ -101,7 +103,9 @@ export function Combobox_country() {
                     key={nation.id}
                     className={({ active }) =>
                       `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                        active ? 'bg-rede text-white' : 'text-gray-900'
+                        active
+                          ? 'bg-rede text-white'
+                          : 'text-black dark:text-white'
                       }`
                     }
                     value={nation}
@@ -145,7 +149,6 @@ export function Combobox_category() {
     { id: 4, title: 'Reptile' },
     { id: 5, title: 'Fish' },
     { id: 6, title: 'Rodent' },
-    { id: 7, title: 'Other' },
   ];
   const [selected, setSelected] = useState(category[0]);
   const [query, setQuery] = useState('');
@@ -163,10 +166,12 @@ export function Combobox_category() {
   return (
     <Combobox value={selected} onChange={setSelected}>
       <div className="relative mt-1">
-        <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+        <div className="relative w-full cursor-default overflow-hidden rounded-lg bg-white dark:bg-black dark:text-white text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
           <Combobox.Input
-            className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 focus:ring-0"
-            displayValue={(type: { title: string }) => type.title}
+            className="w-full border-none py-2 pl-3 pr-10 text-sm leading-5 text-gray-900 dark:text-white dark:bg-blacke focus:ring-0"
+            displayValue={(type: { title: string }) =>
+              selected ? type.title : 'Select'
+            }
             onChange={(event) => setQuery(event.target.value)}
           />
           <Combobox.Button className="absolute inset-y-0 right-0 flex items-center pr-2">
@@ -183,9 +188,9 @@ export function Combobox_category() {
           leaveTo="opacity-0"
           afterLeave={() => setQuery('')}
         >
-          <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+          <Combobox.Options className="absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-blacke py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
             {filteredCategory.length === 0 && query !== '' ? (
-              <div className="relative cursor-default select-none px-4 py-2 text-gray-700">
+              <div className="relative cursor-default select-none px-4 py-2 text-gray-700 dark:text-white">
                 Nothing found.
               </div>
             ) : (
@@ -194,12 +199,14 @@ export function Combobox_category() {
                   key={type.id}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? 'bg-rede text-white' : 'text-gray-900'
+                      active
+                        ? 'bg-rede text-white'
+                        : 'text-gray-900 dark:text-white'
                     }`
                   }
                   value={type}
                 >
-                  {({ selected, active }) => (
+                  {({ selected }) => (
                     <>
                       <span
                         className={`block truncate ${
@@ -209,11 +216,7 @@ export function Combobox_category() {
                         {type.title}
                       </span>
                       {selected ? (
-                        <span
-                          className={`absolute inset-y-0 left-0 flex items-center pl-3 ${
-                            active ? 'text-white' : 'text-rede'
-                          }`}
-                        >
+                        <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-rede">
                           <CheckIcon className="h-5 w-5" aria-hidden="true" />
                         </span>
                       ) : null}

@@ -4,22 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    :root{
-        --color-primary: #E62C36;
-        font-family: 'Raleway', sans-serif;
-    }
-    h1{
-        font-size: 40px;
-        font-weight: bold;
-    }
-    h2{
-        font-size: 32px;
-    }
-    h3{
-        font-size: 24px;
-    }
-    p{
-        font-size: 16px;
-    }
+@layer base {
+  :root {
+    --color-primary: #e62c36;
+    font-family: 'Raleway', sans-serif;
+  }
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .dark h1 h2 h3 p {
+    color: white;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
 }

@@ -13,7 +13,7 @@ function classNames(...classes: string[]) {
 export default function Footer() {
   return (
     <>
-      <footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-gray-900">
+      <footer className="flex justify-center px-4 text-gray-800 bg-white dark:text-white dark:bg-blacke">
         <div className="container px-6 py-6">
           <h1 className="text-lg font-bold text-center lg:text-2xl">
             Join 31,000+ other and never miss <br /> out on new cats, dogs, and
@@ -24,11 +24,11 @@ export default function Footer() {
             <input
               id="email"
               type="text"
-              className="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-red-400 dark:focus:border-red-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-red-300"
+              className="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-blacke dark:text-gray-300 dark:border-gray-600 focus:border-red-400 dark:focus:border-red-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-red-300"
               placeholder="Email Address"
             />
 
-            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-rede rounded-lg hover:drop-shadow-lg focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+            <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-rede hover:scale-110 transition-colors rounded-lg hover:drop-shadow-lg focus:ring focus:ring-gray-300 focus:ring-opacity-80">
               Subscribe
             </button>
           </div>
@@ -47,8 +47,10 @@ export default function Footer() {
                     key={item.name}
                     href={item.href}
                     className={classNames(
-                      item.current ? 'bg-gray-100 text-white' : 'text-black',
-                      'rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md',
+                      item.current
+                        ? 'bg-black text-white'
+                        : 'text-black dark:text-white',
+                      'rounded-lg px-3 py-2 text-base font-bold hover:bg-white dark:hover:bg-blacke hover:drop-shadow-md dark:hover:drop-shadow-lgL',
                     )}
                     aria-current={item.current ? 'page' : undefined}
                   >
