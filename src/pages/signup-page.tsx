@@ -41,50 +41,53 @@ const SignupPage = () => {
               alt="Logo"
             />
           </Link>
-          <div className='grid grid-cols-2  left-[181px] top-[176px] absolute bg-white justify-start items-center w-[350px] gap-4'>
-          <input
-            className="firstname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
-            placeholder="firstname"
-          />
-          <input
-            className="lastname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
-            placeholder="lastname"
-          />
+          <div className="grid grid-cols-2  left-[181px] top-[176px] absolute bg-white justify-start items-center w-[350px] gap-4">
+            <input
+              className="firstname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
+              placeholder="firstname"
+            />
+            <input
+              className="lastname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
+              placeholder="lastname"
+            />
           </div>
           <input
-            className=" email w-[350px] pl-[11px] pr-[296px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
             placeholder="email"
           />
-          <div className="relative">
+          <input
+            className=" number w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            placeholder="number"
+          />
+          <div className="relative top-[355px]">
             <input
-              type={showConfirmPassword ? 'text' : 'password'}
-              className="w-[350px] h-[50px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[236px] inline-flex"
+              type={showPassword ? 'text' : 'password'}
+              className="w-[350px] h-[50px] left-[181px]  absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex"
               placeholder="password"
             />
             <img
-              className="cursor-pointer absolute right-[10px] top-[3px] w-[20px] h-[20px]"
+              className="cursor-pointer absolute right-[200px] top-[15px] w-[20px] h-[20px] z-[1]"
               src={showPassword ? UnhideEye : HideEye}
               alt="Toggle Password Visibility"
               onClick={() => togglePasswordVisibility('password')}
             />
           </div>
 
-
-          <div className="relative">
+          <div className="relative top-[416px]">
             <input
-              type={showPassword ? 'text' : 'password'}
-              className="w-[350px] p-[11px] left-[181px] top-[356px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[173px] inline-flex"
+              type={showConfirmPassword ? 'text' : 'password'}
+              className="w-[350px] p-[11px] left-[181px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[173px] inline-flex"
               placeholder="confirm password"
             />
             <img
-              className="cursor-pointer absolute right-[10px] top-[10px] w-[20px] h-[20px]"
+              className="cursor-pointer absolute right-[200px] top-[15px] w-[20px] h-[20px]"
               src={showConfirmPassword ? UnhideEye : HideEye}
               alt="Toggle Confirm Password Visibility"
               onClick={() => togglePasswordVisibility('confirmPassword')}
             />
           </div>
           <button
-            className=" button_signup w-[350px] bg-red-500 rounded-[5px] h-[41px] left-[181px] top-[416px] absolute"
+            className=" button_signup w-[350px] bg-red-500 rounded-[5px] h-[41px] left-[181px] top-[480px] absolute"
             type="button"
           >
             <div className="left-[146px] top-[11px] absolute text-center text-white text-base font-bold font-['Raleway']">
@@ -92,21 +95,21 @@ const SignupPage = () => {
             </div>
           </button>
 
-          <div className="text-center h-[19px] pl-1.5 left-[232px] top-[481px] absolute flex items-center text-black text-base font-medium font-['Raleway']">
+          <div className="text-center h-[19px] pl-1.5 left-[232px] top-[540px] absolute flex items-center text-black text-base font-medium font-['Raleway']">
             Already have an account?
           </div>
           <Link to="/login">
-            <div className="text-center h-[19px] pl-1.5 left-[430px] top-[481px] absolute flex items-center w-[350px] text-red-500 text-base font-bold font-['Raleway']">
+            <div className="text-center h-[19px] pl-1.5 left-[430px] top-[540px] absolute flex items-center w-[350px] text-red-500 text-base font-bold font-['Raleway']">
               Login
             </div>
           </Link>
 
-          <div className="or left-[346px] top-[520px] absolute text-zinc-600 text-[13px] font-bold font-['Raleway']">
+          <div className="or left-[346px] top-[565px] absolute text-zinc-600 text-[13px] font-bold font-['Raleway']">
             OR
           </div>
 
           <button
-            className="with_google pl-[55px] pr-[83px] pb-0.5 left-[181px] top-[555px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center gap-[15px] inline-flex"
+            className="with_google pl-[55px] pr-[83px] pb-0.5 left-[181px] top-[600px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center gap-[15px] inline-flex"
             type="button"
           >
             <img className="w-[31px] h-[39px]" src={Google} alt="Google Logo" />
