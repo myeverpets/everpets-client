@@ -41,19 +41,34 @@ const SignupPage = () => {
               alt="Logo"
             />
           </Link>
-
+          <div className='grid grid-cols-2  left-[181px] top-[176px] absolute bg-white justify-start items-center w-[350px] gap-4'>
           <input
-            className="firstname h-[49px] pl-[11px] pr-[1px] py-[11px] left-[181px] top-[176px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className="firstname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
             placeholder="firstname"
           />
           <input
-            className="lastname h-[49px] pl-[11px] pr-[10px] py-[11px] left-[365px] top-[176px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className="lastname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
             placeholder="lastname"
           />
+          </div>
           <input
             className=" email w-[350px] pl-[11px] pr-[296px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
             placeholder="email"
           />
+          <div className="relative">
+            <input
+              type={showConfirmPassword ? 'text' : 'password'}
+              className="w-[350px] h-[50px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[236px] inline-flex"
+              placeholder="password"
+            />
+            <img
+              className="cursor-pointer absolute right-[10px] top-[3px] w-[20px] h-[20px]"
+              src={showPassword ? UnhideEye : HideEye}
+              alt="Toggle Password Visibility"
+              onClick={() => togglePasswordVisibility('password')}
+            />
+          </div>
+
 
           <div className="relative">
             <input
@@ -66,20 +81,6 @@ const SignupPage = () => {
               src={showConfirmPassword ? UnhideEye : HideEye}
               alt="Toggle Confirm Password Visibility"
               onClick={() => togglePasswordVisibility('confirmPassword')}
-            />
-          </div>
-
-          <div className="relative">
-            <input
-              type={showConfirmPassword ? 'text' : 'password'}
-              className="w-[350px] h-[50px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[236px] inline-flex"
-              placeholder="password"
-            />
-            <img
-              className="cursor-pointer absolute right-[10px] top-[10px] w-[20px] h-[20px]"
-              src={showPassword ? UnhideEye : HideEye}
-              alt="Toggle Password Visibility"
-              onClick={() => togglePasswordVisibility('password')}
             />
           </div>
           <button
