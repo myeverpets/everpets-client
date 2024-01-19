@@ -37,13 +37,14 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                  <a href={'/'}>
+
+                  <Link to="/">
                     <img
                       className="h-12 w-auto hover:drop-shadow-lg"
                       src={logo}
                       alt="EverPets"
                     />
-                  </a>
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-44 sm:flex items-end ">
                   <div className="flex space-x-4 ">
