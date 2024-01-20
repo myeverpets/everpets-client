@@ -1,4 +1,3 @@
-import { require } from 'flowbite/plugin';
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -24,5 +23,6 @@ export default {
       darkMode: 'class',
     },
   },
+  // eslint-disable-next-line no-undef
   plugins: [require('flowbite/plugin')],
 };
