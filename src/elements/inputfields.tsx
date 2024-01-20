@@ -23,17 +23,24 @@ const Input: FC<InputProps> = ({
 }) => {
   return (
     <div className="input-wrapper">
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={name} className="text-base font-bold font-['Raleway']">
+        {label}
+      </label>
       <input
         type={type}
-        id={label}
-        value={value}
+        id={name}
+        value={value.toString()}
         name={name}
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
+        className="w-[350px] h-[40px] bg-white rounded-[5px] border-2 border-red-400 pl-[11px] pr-[11px] text-base font-bold font-['Raleway']"
       />
-      {error && <p className="error">Input filed can't be empty!</p>}
+      {error && (
+        <p className="error text-base font-bold font-['Raleway']">
+          Input field can't be empty!
+        </p>
+      )}
     </div>
   );
 };
