@@ -25,4 +25,32 @@
   p {
     font-size: 16px;
   }
+  #fon {
+    background: rgb(237, 254, 7);
+    background: linear-gradient(
+      175deg,
+      rgba(237, 254, 7, 1) 0%,
+      rgba(2, 28, 241, 1) 60%
+    );
+  }
+  #block {
+    animation-name: bg;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    background: linear-gradient(
+      350deg,
+      rgba(237, 254, 7, 1) 0%,
+      rgba(2, 28, 241, 1) 60%
+    );
+  }
+  @keyframes bg {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
