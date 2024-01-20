@@ -4,7 +4,6 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import darkMode from '../utils/darkmode';
 import useDarkSide from '../utils/dark';
-import Banner from '../elements/banner';
 
 const navigation = [
   { name: 'About us', href: '/!modal', current: false },
@@ -24,7 +23,6 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white-800">
       {({ open }) => (
         <>
-          <Banner />
           <div className="mx-auto max-w-[91%] ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
