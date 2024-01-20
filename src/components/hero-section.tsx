@@ -14,7 +14,7 @@ export default function HeroSection() {
           </h3>
           <a
             href="#"
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-bold text-center text-white rounded-lg bg-rede hover:drop-shadow-lg hover:bg-primary focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-bold text-center text-white rounded-lg bg-rede hover:drop-shadow-lg dark:hover:drop-shadow-lgL hover:bg-red-600 hover:scale-110 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
           >
             Get started
           </a>
