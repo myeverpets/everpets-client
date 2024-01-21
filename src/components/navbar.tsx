@@ -17,8 +17,8 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-darkMode();
 export default function Navbar() {
+  darkMode();
   return (
     <Disclosure as="nav" className="bg-white-800">
       {({ open }) => (

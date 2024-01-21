@@ -47,7 +47,7 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
     <div className="relative mt-1">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
-          <Listbox.Button className="relative flex justify-between bg-white h-max w-[150px] text-left pl-1 py-1 border-b-2 border-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+          <Listbox.Button className="relative flex justify-between bg-white dark:bg-blacke h-max w-[150px] text-left pl-1 py-1 border-b-2 border-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <span className="relative flex">{selected.title}</span>
             <span className="relative right-0 flex pl-4">
               <ChevronDownIcon
@@ -62,7 +62,7 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-min overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute mt-1 max-h-60 w-min overflow-auto rounded-mdpy-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
               {items.map((item, itemIdx) => (
                 <Listbox.Option
                   key={itemIdx}

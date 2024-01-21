@@ -25,6 +25,12 @@
   p {
     font-size: 16px;
   }
+  /* Listbox */
+  #ListBox {
+    align-self: center;
+  }
+
+  /* Animation banner */
   #fon {
     background: rgb(237, 254, 7);
     background: linear-gradient(
