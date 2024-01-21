@@ -22,5 +22,5 @@ export default function getDistance(
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
   const distance = R * c * 0.001;
-  return distance;
+  return Math.round(distance * 100) / 100;
 }
