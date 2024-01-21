@@ -12,6 +12,7 @@ export default function List() {
   return (
     <>
       <div className="max-w-[91%] mx-auto ">
+        <p className="font-bold text-lg">{pets.length} results</p>
         <div className="mx-auto max-w-2xl lg:max-w-7xl">
           <h2 className="sr-only">Pets</h2>
 

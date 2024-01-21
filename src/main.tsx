@@ -7,6 +7,7 @@ import ErrorPage from './pages/error-page';
 // import Navbar from './components/navbar';
 import CategoryPage from './pages/CategoryPage.tsx';
 import Example from './components/modal.tsx';
+import CardPage from './pages/card-page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
   {
     path: '/!modal',
     element: <Example />,
+  },
+  {
+    path: '/card',
+    element: <CardPage />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
