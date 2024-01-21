@@ -10,6 +10,8 @@ import Example from './components/modal.tsx';
 import Signup from './pages/signup-page.tsx';
 import Login from './pages/login-page.tsx';
 import ForgotPassword from './pages/forgot-password-page.tsx';
+import VerificationCode from './pages/verification-code-page.tsx';
+import SetNewPassword from './pages/set-new-password-page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
   {
     path: '/forgot-password',
     element: <ForgotPassword />,
+  },
+  {
+    path: '/verification-code',
+    element: <VerificationCode />,
+  },
+  {
+    path: '/set-new-password',
+    element: <SetNewPassword />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -36,14 +36,14 @@ const Login = () => {
             />
           </Link>
           <input
-            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[870px] top-[180px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[870px] top-[180px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex font-bold font-['Raleway']"
             placeholder="email"
           />
 
           <div className="relative">
             <input
               type={showPassword ? 'text' : 'password'}
-              className="w-[350px] h-[50px] left-[870px] bottom-[470px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex"
+              className="w-[350px] h-[50px] left-[870px] bottom-[470px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex font-bold font-['Raleway']"
               placeholder="password"
             />
             <img
@@ -54,7 +54,7 @@ const Login = () => {
             />
           </div>
           <Link to="/forgot-password">
-            <div className="text-center h-[19px] pl-1.5 left-[870px] top-[300px] absolute flex items-center w-[350px] text-base  font-['Raleway']">
+            <div className="text-center font-medium font-['Raleway'] h-[19px] pl-1.5 left-[870px] top-[300px] absolute flex items-center w-[350px] text-base  font-['Raleway']">
               Forgot password?
             </div>
           </Link>
@@ -66,7 +66,7 @@ const Login = () => {
               Sign up
             </div>
           </button>
-          <div className="text-center h-[19px] pl-1.5 left-[885px] top-[395px] absolute flex items-center text-black text-base  font-['Raleway']">
+          <div className="text-center  font-medium font-['Raleway'] h-[19px] pl-1.5 left-[885px] top-[395px] absolute flex items-center text-black text-base">
             Does have an account?
           </div>
           <Link to="/signup">

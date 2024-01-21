@@ -28,7 +28,7 @@ export default function ForgotPassword() {
       <div className="w-[1440px] h-[844px] relative bg-white">
         <Link to={'/'}>
           <img
-            className="w-[249px] h-[85px] left-[599px] top-[65px] absolute"
+            className="w-[248px] h-[85px] left-[599px] top-[65px] absolute"
             src={Logo}
             alt="Logo"
           />
