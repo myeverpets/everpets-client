@@ -14,8 +14,6 @@ export default function CategoryPage() {
       setDisplayText('Invalid email address.');
     } else {
       setDisplayText(null);
-      // Assuming validation is successful
-      // Redirect to verification-code page
       window.location.href = '/verification-code';
     }
   };
