@@ -5,14 +5,28 @@ import backToLogin from '../assets/left-arrow.png';
 
 export default function CategoryPage() {
   const [displayText, setDisplayText] = useState<string | null>(null);
+  const [email, setEmail] = useState<string>('');
 
   const handleButtonClick = () => {
-    setDisplayText('That address has no associated user account.');
+    if (email.trim() === '') {
+      setDisplayText('Email field cannot be empty.');
+    } else if (!validateEmail(email)) {
+      setDisplayText('Invalid email address.');
+    } else {
+      setDisplayText(null);
+      // Assuming validation is successful
+      // Redirect to verification-code page
+      window.location.href = '/verification-code';
+    }
+  };
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   };
 
   return (
     <div className="">
-
       <div className="w-[1440px] h-[844px] relative bg-white">
         <Link to={'/'}>
           <img
@@ -34,6 +48,8 @@ export default function CategoryPage() {
             className="w-full h-full bg-white rounded-[5px] border-2 border-red-400 pl-[11px] pr-[11px] text-base font-bold font-['Raleway']"
             type="text"
             placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value.trim())}
           />
         </div>
 
@@ -41,15 +57,14 @@ export default function CategoryPage() {
           {displayText}
         </div>
         <button
-          className="button_signup w-[350px] bg-red-500 rounded-[5px] h-[41px] left-[543px] top-[381px] absolute"
+          className="button_signup w-[350px] bg-red-500 rounded-[5px] h-[41px] left-[543px] top-[381px] absolute flex justify-center items-center"
           type="button"
           onClick={handleButtonClick}
         >
-          <div className="left-[146px] top-[11px] absolute text-center text-white text-base font-bold font-['Raleway']">
-            Sign up
+          <div className="text-white text-base font-bold font-['Raleway']">
+            Reset Password
           </div>
         </button>
-
 
         <div className="w-[140px] left-[639px] top-[488px] absolute">
           <Link to={'/login'}>
