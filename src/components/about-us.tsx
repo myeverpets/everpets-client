@@ -3,7 +3,10 @@ import adopt_icom from '../assets/Dogg.png';
 export default function AboutUs() {
   return (
     <>
-      <div className="grid-cols-1 z-40 grid max-w-[91%] py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-10 dark:text-white">
+      <div
+        id="AboutUs"
+        className="grid-cols-1 z-40 grid max-w-[91%] py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-10 dark:text-white"
+      >
         <div className="max-w-[62%] mx-auto lg:gap-8 xl:gap-0 text-center col-span-2">
           <span className="text-[40px] font-bold">About Us</span>
         </div>
