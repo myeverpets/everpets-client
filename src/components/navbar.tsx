@@ -6,7 +6,7 @@ import darkMode from '../utils/darkmode';
 import useDarkSide from '../utils/dark';
 
 const navigation = [
-  { name: 'About us', href: '/!modal', current: false },
+  { name: 'About us', href: '#AboutUs', current: false },
   { name: 'Help', href: '/!modal', current: false },
   { name: 'Out stories', href: '/!modal', current: false },
   { name: 'Categories', href: '/category', current: false },
@@ -51,6 +51,7 @@ export default function Navbar() {
                   <div className="flex space-x-4 ">
                     {navigation.map((item) => (
                       <Link
+                        key={item.name}
                         to={item.href}
                         className="rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md dark:text-white  dark:hover:bg-blacke dark:hover:drop-shadow-lgL"
                       >
