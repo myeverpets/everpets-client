@@ -54,7 +54,7 @@ const Login = () => {
             />
           </div>
           <Link to="/forgot-password">
-            <div className="text-center font-medium font-['Raleway'] h-[19px] pl-1.5 left-[870px] top-[300px] absolute flex items-center w-[350px] text-base  font-['Raleway']">
+            <div className="text-center font-medium h-[19px] pl-1.5 left-[870px] top-[300px] absolute flex items-center w-[350px] text-base  font-['Raleway']">
               Forgot password?
             </div>
           </Link>
