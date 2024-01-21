@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../assets/logo.png';
 import backToLogin from '../assets/left-arrow.png';
 
-export default function CategoryPage() {
+export default function ForgotPassword() {
   const [displayText, setDisplayText] = useState<string | null>(null);
   const [email, setEmail] = useState<string>('');
 
