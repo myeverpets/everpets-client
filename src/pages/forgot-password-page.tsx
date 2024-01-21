@@ -12,6 +12,7 @@ export default function CategoryPage() {
 
   return (
     <div className="">
+
       <div className="w-[1440px] h-[844px] relative bg-white">
         <Link to={'/'}>
           <img
@@ -48,6 +49,7 @@ export default function CategoryPage() {
             Sign up
           </div>
         </button>
+
 
         <div className="w-[140px] left-[639px] top-[488px] absolute">
           <Link to={'/login'}>

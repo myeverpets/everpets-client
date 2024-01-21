@@ -1,4 +1,3 @@
-import './App.css';
 import './components/navbar';
 import HeroSection from './components/hero-section';
 import Search from './components/search';

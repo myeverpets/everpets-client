@@ -1,16 +1,24 @@
-import { useState, useEffect } from 'react';
-
 export default function useDarkSide() {
-  const [theme, setTheme] = useState(localStorage.theme);
-  const colorTheme = theme === 'dark' ? 'light' : 'dark';
-  localStorage.setItem('theme', theme);
-  useEffect(() => {
-    const root = window.document.documentElement;
-    root.classList.remove(colorTheme);
-    root.classList.add(theme);
-    if (localStorage.theme == 'dark') localStorage.removeItem('theme');
-    else localStorage.setItem('theme', theme);
-  }, [theme, colorTheme]);
+  const themeToggleDarkIcon = document.querySelector(
+    'svg#theme-toggle-dark-icon',
+  );
+  const themeToggleLightIcon = document.querySelector(
+    'svg#theme-toggle-light-icon',
+  );
+  const isDarkMode =
+    localStorage.getItem('color-theme') === 'dark' ||
+    (!('color-theme' in localStorage) &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches);
 
-  return [colorTheme, setTheme];
+  if (isDarkMode) {
+    localStorage.setItem('color-theme', 'light');
+    document.documentElement.classList.remove('dark');
+    themeToggleLightIcon?.classList.add('hidden');
+    themeToggleDarkIcon?.classList.remove('hidden');
+  } else {
+    localStorage.setItem('color-theme', 'dark');
+    document.documentElement.classList.add('dark');
+    themeToggleDarkIcon?.classList.add('hidden');
+    themeToggleLightIcon?.classList.remove('hidden');
+  }
 }

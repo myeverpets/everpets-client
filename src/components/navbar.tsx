@@ -1,14 +1,15 @@
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import darkMode from '../utils/darkmode';
-import { Link } from 'react-router-dom';
+import useDarkSide from '../utils/dark';
 
 const navigation = [
-  { name: 'About us', href: '/!modal', current: false },
+  { name: 'About us', href: '#AboutUs', current: false },
   { name: 'Help', href: '/!modal', current: false },
   { name: 'Out stories', href: '/!modal', current: false },
-  { name: 'Categories', href: '/!modal', current: false },
+  { name: 'Categories', href: '/category', current: false },
   { name: 'Contact', href: '/!modal', current: false },
 ];
 
@@ -16,6 +17,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
+darkMode();
 export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-white-800">
@@ -37,10 +39,9 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-
-                  <Link to="/">
+                  <Link to={'/'}>
                     <img
-                      className="h-12 w-auto hover:drop-shadow-lg"
+                      className="h-12 w-auto hover:drop-shadow-lg dark:hover:drop-shadow-lgL"
                       src={logo}
                       alt="EverPets"
                     />
@@ -49,19 +50,13 @@ export default function Navbar() {
                 <div className="hidden sm:ml-44 sm:flex items-end ">
                   <div className="flex space-x-4 ">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-100 text-white'
-                            : 'text-black',
-                          'rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md dark:text-white  dark:hover:bg-blacke dark:hover:drop-shadow-lgL',
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                        to={item.href}
+                        className="rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md dark:text-white  dark:hover:bg-blacke dark:hover:drop-shadow-lgL"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -72,11 +67,11 @@ export default function Navbar() {
                   id="theme-toggle"
                   type="button"
                   className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-                  onClick={darkMode}
+                  onClick={useDarkSide}
                 >
                   <svg
                     id="theme-toggle-dark-icon"
-                    className="hidden w-5 h-5 animate-pulse"
+                    className="hidden w-5 h-5 animate-spin"
                     fill="black"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +80,7 @@ export default function Navbar() {
                   </svg>
                   <svg
                     id="theme-toggle-light-icon"
-                    className="hidden w-5 h-5 animate-pulse"
+                    className="hidden w-5 h-5 animate-spin"
                     fill="yellow"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
