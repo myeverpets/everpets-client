@@ -4,7 +4,6 @@ import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import darkMode from '../utils/darkmode';
 import useDarkSide from '../utils/dark';
-import Banner from '../elements/banner';
 
 const navigation = [
   { name: 'About us', href: '#AboutUs', current: false },
@@ -24,7 +23,6 @@ export default function Navbar() {
     <Disclosure as="nav" className="bg-white-800">
       {({ open }) => (
         <>
-          <Banner />
           <div className="mx-auto max-w-[91%] ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -100,27 +98,27 @@ export default function Navbar() {
                   className="relative rounded-lg bg-white dark:bg-blacke p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-rede hover:text-red-600 
                   text-base fond-bold"
                 >
-                  <a
-                    href="/login"
+                  <Link
+                    to="/login"
                     className="text-base font-semibold px-2 py-1"
                   >
                     Log in
-                  </a>
-                  <span className="absolute -inset-1.5" />
+                    <span className="absolute -inset-1.5" />
+                  </Link>
                   <span className="sr-only">Log in</span>
                 </button>
                 <button
                   type="button"
                   className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
                 >
-                  <a
-                    href="/signup"
+                  <Link
+                    to="/signup"
                     className="text-base font-semibold px-2 py-1"
                   >
                     Sign up
-                  </a>
-                  <span className="absolute -inset-1.5" />
-                  <span className="sr-only">Sign up</span>
+                    <span className="absolute -inset-1.5" />
+                    <span className="sr-only">Sign up</span>
+                  </Link>
                 </button>
               </div>
             </div>
