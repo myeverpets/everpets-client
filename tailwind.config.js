@@ -11,6 +11,7 @@ export default {
         rede: '#E62C36',
         blacke: '#191919', 
       },
+      
       dropShadow: {
         lgL: [
           '0 10px 8px rgb(255, 255, 255, 0.04)',
@@ -23,6 +24,8 @@ export default {
       darkMode: 'class',
     },
   },
+
   // eslint-disable-next-line no-undef
   plugins: [require('flowbite/plugin')],
 };
+
