@@ -21,7 +21,7 @@ const ForgotPassword = () => {
         </Link>
 
         <input
-          className="email h-10 w-[350px] pl-[11px] pr-[11px] py-[11px] left-[543px] top-[285px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex text-base font-bold font-raleway"
+          className="email h-11 w-[350px] pl-[11px] pr-[11px] py-[11px] left-[543px] top-[285px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex text-base font-bold font-raleway"
           placeholder="email"
         />
 

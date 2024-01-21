@@ -43,26 +43,26 @@ const SignupPage = () => {
           </Link>
           <div className="grid grid-cols-2  left-[181px] top-[176px] absolute bg-white justify-start items-center w-[350px] gap-4">
             <input
-              className="firstname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
+              className="firstname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px] font-bold font-raleway"
               placeholder="firstname"
             />
             <input
-              className="lastname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px]"
+              className="lastname col-span-1  rounded-[5px] border-2 border-red-400 h-[49px] pl-[11px] pr-[1px] py-[11px] font-bold font-raleway"
               placeholder="lastname"
             />
           </div>
           <input
-            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex font-bold font-raleway"
             placeholder="email"
           />
           <input
-            className=" number w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className=" number w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex font-bold font-raleway"
             placeholder="number"
           />
           <div className="relative top-[355px]">
             <input
               type={showPassword ? 'text' : 'password'}
-              className="w-[350px] h-[50px] left-[181px]  absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex"
+              className="w-[350px] h-[50px] left-[181px]  absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex font-bold font-raleway "
               placeholder="password"
             />
             <img
@@ -76,7 +76,7 @@ const SignupPage = () => {
           <div className="relative top-[416px]">
             <input
               type={showConfirmPassword ? 'text' : 'password'}
-              className="w-[350px] p-[11px] left-[181px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[173px] inline-flex"
+              className="w-[350px] p-[11px] left-[181px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[173px] inline-flex font-bold font-raleway"
               placeholder="confirm password"
             />
             <img

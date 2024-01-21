@@ -36,14 +36,14 @@ const Login = () => {
             />
           </Link>
           <input
-            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[870px] top-[180px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
+            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[870px] top-[180px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex font-bold font-raleway"
             placeholder="email"
           />
 
           <div className="relative">
             <input
               type={showPassword ? 'text' : 'password'}
-              className="w-[350px] h-[50px] left-[870px] bottom-[470px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex"
+              className="w-[350px] h-[50px] left-[870px] bottom-[470px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex font-bold font-raleway"
               placeholder="password"
             />
             <img
