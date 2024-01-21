@@ -3,7 +3,6 @@ import { ChangeEvent, FC } from 'react';
 interface InputProps {
   type: 'text' | 'number' | 'email' | 'password';
   label: string;
-  value: string | number;
   name: string;
   placeholder: string;
   error: boolean;
@@ -16,7 +15,6 @@ interface InputProps {
 const Input: FC<InputProps> = ({
   type,
   label,
-  value,
   name,
   placeholder,
   error,
@@ -31,6 +29,7 @@ const Input: FC<InputProps> = ({
   };
 
   return (
+
     <div className="input-wrapper" style={wrapperStyle}>
       <label htmlFor={name} className="text-base font-bold font-raleway">
         {label}
@@ -43,6 +42,7 @@ const Input: FC<InputProps> = ({
         placeholder={placeholder}
         onChange={onChange}
         disabled={disabled}
+
         className="h-10 w-[350px] pl-[11px] pr-[11px] py-[11px] bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex text-base font-bold font-raleway"
       />
       {error && (
