@@ -47,11 +47,11 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
     <div className="relative mt-1">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
-          <Listbox.Button className="relative flex justify-between bg-white dark:bg-blacke h-max w-[150px] text-left pl-1 py-1 border-b-2 border-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+          <Listbox.Button className="relative dark:text-white flex justify-between bg-white dark:bg-blacke h-max w-[150px] text-left pl-1 py-1 border-b-2 border-gray-900 dark:border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <span className="relative flex">{selected.title}</span>
             <span className="relative right-0 flex pl-4">
               <ChevronDownIcon
-                className="h-5 w-5 text-gray-900"
+                className="h-5 w-5 text-gray-900 dark:text-white"
                 aria-hidden="true"
               />
             </span>
@@ -62,13 +62,15 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-min overflow-auto rounded-mdpy-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute mt-1 max-h-60 w-min overflow-auto rounded-mdpy-1 text-base drop-shadow-lg dark:drop-shadow-lgL rounded-md ring-1 ring-black/5 focus:outline-none sm:text-sm">
               {items.map((item, itemIdx) => (
                 <Listbox.Option
                   key={itemIdx}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? 'bg-gray-100' : 'bg-white'
+                      active
+                        ? 'bg-gray-100 dark:bg-gray-700'
+                        : 'bg-white dark:bg-blacke'
                     }`
                   }
                   value={item}
@@ -76,7 +78,7 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
                   {({ selected }) => (
                     <>
                       <span
-                        className={`block truncate ${
+                        className={`block truncate dark:text-white ${
                           selected ? 'font-medium' : 'font-normal'
                         }`}
                       >
