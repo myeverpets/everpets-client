@@ -30,7 +30,7 @@ export default function Filters() {
         <div id="ListBox" className="">
           <ColorPet />
         </div>
-        <div className="max-w-min text-center items-center self-center hover:drop-shadow-lg bg-white rounded-lg py-2 px-2">
+        <div className="max-w-min text-center items-center self-center hover:drop-shadow-lg dark:hover:drop-shadow-lgL bg-white dark:bg-blacke rounded-lg py-2 px-2">
           <Link
             to={'/search'}
             className="items-center text-center text-rede font-bold text-xl"
