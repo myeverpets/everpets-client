@@ -6,7 +6,6 @@ import App from './App.tsx';
 import ErrorPage from './pages/error-page';
 // import Navbar from './components/navbar';
 import CategoryPage from './pages/CategoryPage.tsx';
-import Example from './components/modal.tsx';
 import CardPage from './pages/card-page.tsx';
 import Signup from './pages/signup-page.tsx';
 import Login from './pages/login-page.tsx';
@@ -23,10 +22,6 @@ const router = createBrowserRouter([
   {
     path: '/category',
     element: <CategoryPage />,
-  },
-  {
-    path: '/!modal',
-    element: <Example />,
   },
   {
     path: '/card/:id',

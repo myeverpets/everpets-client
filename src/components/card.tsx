@@ -1,9 +1,11 @@
 import { useParams } from 'react-router';
 import pets from '../data/pets.json';
+import users from '../data/users.json';
 import { useEffect, useState } from 'react';
 import getDistance from '../utils/distance';
 import { useGeolocated } from 'react-geolocated';
 import PetInfo from './pet-info';
+import ModalOK from '../components/modals';
 
 interface Pet {
   id: number;
@@ -13,11 +15,22 @@ interface Pet {
   imageSrc: string;
   imageAlt: string;
   location: { latitude: number; longitude: number };
+  ownerID: number;
+}
+
+interface Owner {
+  id: number;
+  email: string;
+  phone: string;
+  firstName: string;
+  lastName: string;
 }
 
 export default function Card() {
   const { id } = useParams();
   const [currentPet, setCurrentPet] = useState<Pet>();
+  const [currentOwner, setCurrentOwner] = useState<Owner>();
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const pet = pets.find((value) => {
@@ -27,6 +40,15 @@ export default function Card() {
     setCurrentPet(pet);
   }, [id]);
   console.log();
+
+  useEffect(() => {
+    const owner = users.find((value) => {
+      return value.id === id;
+    }) as unknown as Owner;
+    console.log(owner);
+    setCurrentOwner(owner);
+  }, [id]);
+
   const { coords } = useGeolocated({
     positionOptions: {
       enableHighAccuracy: true,
@@ -86,20 +108,18 @@ export default function Card() {
               </div>
               <div className="grid col-span-1 items-center content-around">
                 <div className="flex flex-col mt-4">
-                  <h4 className="text-lg font-medium text-gray-900 dark:text-white">
-                    Owner Information
-                  </h4>
                   <div className="mt-2">
-                    <p className="text-sm text-gray-500">Name: John Doe</p>
                     <p className="text-sm text-gray-500">
-                      Email: john.doe@example.com
+                      {currentOwner?.firstName} {currentOwner?.lastName}
                     </p>
-                    <p className="text-sm text-gray-500">Phone: 123-456-7890</p>
                   </div>
                 </div>
                 <div className="grid flex-col mt-4">
-                  <button className="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-rede hover:scale-110 transition-colors rounded-lg hover:drop-shadow-lg focus:ring focus:ring-gray-300 focus:ring-opacity-80">
-                    ADOPT NOW
+                  <button
+                    className="bg-rede text-white font-bold py-2 px-4 rounded-lg"
+                    onClick={() => setShowModal(true)}
+                  >
+                    Contact now
                   </button>
                 </div>
               </div>
@@ -107,6 +127,9 @@ export default function Card() {
           </div>
         </div>
         {currentPet && <PetInfo pet={currentPet} />}
+        {showModal && (
+          <ModalOK ownerId={currentPet?.ownerID?.toString() ?? ''} />
+        )}
       </div>
     </>
   );
