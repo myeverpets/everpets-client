@@ -5,6 +5,8 @@ import Category from './components/category';
 import Footer from './components/footer';
 import AboutUs from './components/about-us';
 import Navbar from './components/navbar';
+import Subscribe from './pages/subscribe';
+
 export default function App() {
   return (
     <>
@@ -14,6 +16,7 @@ export default function App() {
         <Search />
         <Category />
         <AboutUs />
+        <Subscribe />
         <Footer />
       </div>
     </>
