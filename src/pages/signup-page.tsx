@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Cat from '../assets/signup_cat.png';
 import Logo from '../assets/logo.png';
@@ -52,17 +52,17 @@ const SignupPage = () => {
             />
           </div>
           <input
-            className=" email w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex font-bold font-raleway"
+            className=" email font-bold font-['Raleway'] w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[236px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
             placeholder="email"
           />
           <input
-            className=" number w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex font-bold font-raleway"
+            className=" number font-bold font-['Raleway'] w-[350px] pl-[11px] pr-[11px] py-[11px] left-[181px] top-[296px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-start items-center inline-flex"
             placeholder="number"
           />
           <div className="relative top-[355px]">
             <input
               type={showPassword ? 'text' : 'password'}
-              className="w-[350px] h-[50px] left-[181px]  absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex font-bold font-raleway "
+              className="w-[350px] font-bold font-['Raleway'] h-[50px] left-[181px]  absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start inline-flex"
               placeholder="password"
             />
             <img
@@ -76,7 +76,7 @@ const SignupPage = () => {
           <div className="relative top-[416px]">
             <input
               type={showConfirmPassword ? 'text' : 'password'}
-              className="w-[350px] p-[11px] left-[181px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[173px] inline-flex font-bold font-raleway"
+              className="w-[350px] font-bold font-['Raleway'] p-[11px] left-[181px] absolute bg-white rounded-[5px] border-2 border-red-400 justify-center items-start gap-[173px] inline-flex"
               placeholder="confirm password"
             />
             <img

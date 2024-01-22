@@ -1,14 +1,16 @@
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 import { Disclosure } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import darkMode from '../utils/darkmode';
-import { Link } from 'react-router-dom';
+import useDarkSide from '../utils/dark';
+import Banner from './banner';
 
 const navigation = [
-  { name: 'About us', href: '/!modal', current: false },
+  { name: 'About us', href: '#AboutUs', current: false },
   { name: 'Help', href: '/!modal', current: false },
   { name: 'Out stories', href: '/!modal', current: false },
-  { name: 'Categories', href: '/!modal', current: false },
+  { name: 'Categories', href: '/category', current: false },
   { name: 'Contact', href: '/!modal', current: false },
 ];
 
@@ -17,10 +19,12 @@ function classNames(...classes: string[]) {
 }
 
 export default function Navbar() {
+  darkMode();
   return (
     <Disclosure as="nav" className="bg-white-800">
       {({ open }) => (
         <>
+          <Banner />
           <div className="mx-auto max-w-[91%] ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -37,10 +41,9 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-
-                  <Link to="/">
+                  <Link to={'/'}>
                     <img
-                      className="h-12 w-auto hover:drop-shadow-lg"
+                      className="h-12 w-auto hover:drop-shadow-lg dark:hover:drop-shadow-lgL"
                       src={logo}
                       alt="EverPets"
                     />
@@ -49,19 +52,13 @@ export default function Navbar() {
                 <div className="hidden sm:ml-44 sm:flex items-end ">
                   <div className="flex space-x-4 ">
                     {navigation.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
-                        className={classNames(
-                          item.current
-                            ? 'bg-gray-100 text-white'
-                            : 'text-black',
-                          'rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md dark:text-white  dark:hover:bg-blacke dark:hover:drop-shadow-lgL',
-                        )}
-                        aria-current={item.current ? 'page' : undefined}
+                        to={item.href}
+                        className="rounded-lg px-3 py-2 text-base font-bold hover:bg-white hover:drop-shadow-md dark:text-white  dark:hover:bg-blacke dark:hover:drop-shadow-lgL"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -72,11 +69,11 @@ export default function Navbar() {
                   id="theme-toggle"
                   type="button"
                   className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-1 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-                  onClick={darkMode}
+                  onClick={useDarkSide}
                 >
                   <svg
                     id="theme-toggle-dark-icon"
-                    className="hidden w-5 h-5 animate-pulse"
+                    className="hidden w-5 h-5 animate-spin"
                     fill="black"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +82,7 @@ export default function Navbar() {
                   </svg>
                   <svg
                     id="theme-toggle-light-icon"
-                    className="hidden w-5 h-5 animate-pulse"
+                    className="hidden w-5 h-5 animate-spin"
                     fill="yellow"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,33 +95,53 @@ export default function Navbar() {
                   </svg>
                 </button>
                 <hr className="w-px h-6 bg-gray-300 sm:mx-3" />
-                <button
-                  type="button"
-                  className="relative rounded-lg bg-white dark:bg-blacke p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-rede hover:text-red-600 
-                  text-base fond-bold"
-                >
-                  <Link
-                    to="/login"
-                    className="text-base font-semibold px-2 py-1"
-                  >
-                    Log in
-                    <span className="absolute -inset-1.5" />
-                  </Link>
-                  <span className="sr-only">Log in</span>
-                </button>
-                <button
-                  type="button"
-                  className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
-                >
-                  <Link
-                    to="/signup"
-                    className="text-base font-semibold px-2 py-1"
-                  >
-                    Sign up
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">Sign up</span>
-                  </Link>
-                </button>
+                {localStorage.getItem('isLogged') === 'true' ? (
+                  <div className=" inline-flex items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/75.jpg"
+                      alt=""
+                      className="rounded-full relative h-10"
+                    />
+                    <Link
+                      to="/profile"
+                      className="text-base font-semibold px-2 py-1"
+                    >
+                      <span className="text-rede text-xl font-bold hover:text-red-800">
+                        My account
+                      </span>
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <button
+                      type="button"
+                      className="relative rounded-lg bg-white dark:bg-blacke p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-rede hover:text-red-600 
+                    text-base fond-bold"
+                    >
+                      <Link
+                        to="/login"
+                        className="text-base font-semibold px-2 py-1"
+                      >
+                        Log in
+                        <span className="absolute -inset-1.5" />
+                      </Link>
+                      <span className="sr-only">Log in</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
+                    >
+                      <Link
+                        to="/signup"
+                        className="text-base font-semibold px-2 py-1"
+                      >
+                        Sign up
+                        <span className="absolute -inset-1.5" />
+                        <span className="sr-only">Sign up</span>
+                      </Link>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

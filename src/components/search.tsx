@@ -16,7 +16,7 @@ export default function Search() {
           <div className="lg:col-span-2">
             <Combobox_category />
           </div>
-          <button className="bg-white dark:bg-blacke h-max rounded-lg text-rede text-2xl font-semibold py-[6px] focus:drop-shadow-md focus:outline-none focus:border-gray-400">
+          <button className="bg-white dark:bg-blacke h-max rounded-lg text-rede text-2xl hover:drop-shadow-lg dark:hover:drop-shadow-lgL font-semibold py-[6px] focus:drop-shadow-md focus:outline-none focus:border-gray-400">
             Search
           </button>
         </div>

@@ -11,10 +11,29 @@ const categories = [
   { id: 6, title: 'Rodent' },
 ];
 const age = [
-  { id: 1, title: 'Adult' },
-  { id: 2, title: 'Young' },
-  { id: 3, title: 'Baby' },
-  { id: 4, title: 'Senior' },
+  { id: 1, title: 'Baby (0-1 year)' },
+  { id: 2, title: 'Young (1-3 years)' },
+  { id: 3, title: 'Adult (3-7 years)' },
+  { id: 4, title: 'Senior (7+ years)' },
+];
+const distance = [
+  { id: 1, title: 'Settlement' },
+  { id: 2, title: '0-5 km' },
+  { id: 3, title: '5-10 km' },
+  { id: 4, title: '10-25 km' },
+  { id: 5, title: '25-100 km' },
+  { id: 6, title: '100+ km' },
+];
+
+const sex = [
+  { id: 1, title: 'Male' },
+  { id: 2, title: 'Female' },
+];
+
+const size = [
+  { id: 1, title: 'Small' },
+  { id: 2, title: 'Medium' },
+  { id: 3, title: 'Large' },
 ];
 
 interface Item {
@@ -28,11 +47,11 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
     <div className="relative mt-1">
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative mt-1">
-          <Listbox.Button className="relative flex justify-between bg-white h-max text-left pl-1 py-1 border-b-2 border-gray-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
+          <Listbox.Button className="relative dark:text-white flex justify-between bg-white dark:bg-blacke h-max w-[150px] text-left pl-1 py-1 border-b-2 border-gray-900 dark:border-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-teal-300 sm:text-sm">
             <span className="relative flex">{selected.title}</span>
             <span className="relative right-0 flex pl-4">
               <ChevronDownIcon
-                className="h-5 w-5 text-gray-900"
+                className="h-5 w-5 text-gray-900 dark:text-white"
                 aria-hidden="true"
               />
             </span>
@@ -43,13 +62,15 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-min overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+            <Listbox.Options className="absolute mt-1 max-h-60 w-min overflow-auto rounded-mdpy-1 text-base drop-shadow-lg dark:drop-shadow-lgL rounded-md ring-1 ring-black/5 focus:outline-none sm:text-sm">
               {items.map((item, itemIdx) => (
                 <Listbox.Option
                   key={itemIdx}
                   className={({ active }) =>
                     `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                      active ? 'bg-gray-100' : 'bg-white'
+                      active
+                        ? 'bg-gray-100 dark:bg-gray-700'
+                        : 'bg-white dark:bg-blacke'
                     }`
                   }
                   value={item}
@@ -57,7 +78,7 @@ export function CustomListbox({ items }: { items: Item[]; label: string }) {
                   {({ selected }) => (
                     <>
                       <span
-                        className={`block truncate ${
+                        className={`block truncate dark:text-white ${
                           selected ? 'font-medium' : 'font-normal'
                         }`}
                       >
@@ -86,4 +107,16 @@ export function ListboxCategory() {
 
 export function ListboxAge() {
   return <CustomListbox items={age} label="Age" />;
+}
+
+export function ListboxDistance() {
+  return <CustomListbox items={distance} label="Distance" />;
+}
+
+export function ListboxSex() {
+  return <CustomListbox items={sex} label="Sex" />;
+}
+
+export function ListboxSize() {
+  return <CustomListbox items={size} label="Size" />;
 }

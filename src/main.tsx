@@ -6,10 +6,13 @@ import App from './App.tsx';
 import ErrorPage from './pages/error-page';
 // import Navbar from './components/navbar';
 import CategoryPage from './pages/CategoryPage.tsx';
-import Example from './components/modal.tsx';
+import CardPage from './pages/card-page.tsx';
 import Signup from './pages/signup-page.tsx';
 import Login from './pages/login-page.tsx';
 import ForgotPassword from './pages/forgot-password-page.tsx';
+import VerificationCode from './pages/verification-code-page.tsx';
+import SetNewPassword from './pages/set-new-password-page.tsx';
+import AccountPage from './pages/account-page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -22,8 +25,8 @@ const router = createBrowserRouter([
     element: <CategoryPage />,
   },
   {
-    path: '/!modal',
-    element: <Example />,
+    path: '/card/:id',
+    element: <CardPage />,
   },
   {
     path: '/signup',
@@ -36,6 +39,18 @@ const router = createBrowserRouter([
   {
     path: '/forgot-password',
     element: <ForgotPassword />,
+  },
+  {
+    path: '/verification-code',
+    element: <VerificationCode />,
+  },
+  {
+    path: '/set-new-password',
+    element: <SetNewPassword />,
+  },
+  {
+    path: '/account',
+    element: <AccountPage />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(

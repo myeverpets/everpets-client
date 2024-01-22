@@ -3,7 +3,10 @@ import adopt_icom from '../assets/Dogg.png';
 export default function AboutUs() {
   return (
     <>
-      <div className="grid-cols-1 z-40 grid max-w-[91%] py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-10 dark:text-white">
+      <div
+        id="AboutUs"
+        className="grid-cols-1 z-40 grid max-w-[91%] py-6 mx-auto lg:gap-8 xl:gap-0 lg:py-10 dark:text-white"
+      >
         <div className="max-w-[62%] mx-auto lg:gap-8 xl:gap-0 text-center col-span-2">
           <span className="text-[40px] font-bold">About Us</span>
         </div>
@@ -27,7 +30,7 @@ export default function AboutUs() {
         </div>
         <div className="grid grid-cols-2 mx-auto gap-x-40 text-justify">
           <div className="lg:text-[40px] sm:text-[36px] font-bold col-span-1 max-w-[400px]">
-            <h1 className="text-black text-[40px]">
+            <h1 className="text-black dark:text-white text-[40px]">
               <b className="text-rede text-[64px]">01</b>Discover
             </h1>
             <h3 className="font-medium lg:text-[20px] sm:text-[16px]">
@@ -39,7 +42,7 @@ export default function AboutUs() {
             </h3>
           </div>
           <div className="lg:text-[40px] sm:text-[36px] font-bold col-span-1 max-w-[400px]">
-            <h1 className="text-black text-[40px]">
+            <h1 className="text-black dark:text-white text-[40px]">
               <b className="text-rede text-[64px]">02</b>Home
             </h1>
             <h3 className="font-medium lg:text-[20px] sm:text-[16px]">
@@ -52,7 +55,7 @@ export default function AboutUs() {
             </h3>
           </div>
           <div className="lg:text-[40px] sm:text-[36px] font-bold col-span-1 max-w-[400px]">
-            <h1 className="text-black text-[40px]">
+            <h1 className="text-black dark:text-white text-[40px]">
               <b className="text-rede text-[64px]">03</b>Process
             </h1>
             <h3 className="font-medium lg:text-[20px] sm:text-[16px]">
@@ -64,7 +67,7 @@ export default function AboutUs() {
             </h3>
           </div>
           <div className="lg:text-[40px] sm:text-[36px] font-bold col-span-1 max-w-[400px]">
-            <h1 className="text-black text-[40px]">
+            <h1 className="text-black dark:text-white text-[40px]">
               <b className="text-rede text-[64px]">04</b>Educational
             </h1>
             <h3 className="font-medium lg:text-[20px] sm:text-[16px]">
@@ -75,7 +78,7 @@ export default function AboutUs() {
             </h3>
           </div>
           <div className="lg:text-[40px] sm:text-[36px] font-bold col-span-1 max-w-[400px]">
-            <h1 className="text-black text-[40px]">
+            <h1 className="text-black dark:text-white text-[40px]">
               <b className="text-rede text-[64px]">05</b>Journey
             </h1>
             <h3 className="font-medium lg:text-[20px] sm:text-[16px]">
@@ -87,7 +90,7 @@ export default function AboutUs() {
             </h3>
           </div>
           <div className="lg:text-[40px] sm:text-[36px] font-bold col-span-1 max-w-[400px]">
-            <h1 className="text-black text-[40px]">
+            <h1 className="text-black dark:text-white text-[40px]">
               <b className="text-rede text-[64px]">06</b>Supportive
             </h1>
             <h3 className="font-medium lg:text-[20px] sm:text-[16px]">
