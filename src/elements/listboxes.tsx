@@ -21,12 +21,12 @@ const distance = [
   { id: 2, title: '0-5 km' },
   { id: 3, title: '5-10 km' },
   { id: 4, title: '10-25 km' },
-  { id: 5, title: '25+ km' },
-  { id: 6, title: '*eigenvalue*' },
+  { id: 5, title: '25-100 km' },
+  { id: 6, title: '100+ km' },
 ];
 
 const sex = [
-  { id: 1, title: 'Fale' },
+  { id: 1, title: 'Male' },
   { id: 2, title: 'Female' },
 ];
 

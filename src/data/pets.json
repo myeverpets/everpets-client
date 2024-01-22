@@ -13,7 +13,8 @@
     "weight": 5,
     "length": 15,
     "sex": "Male",
-    "color": "white-black-brown"
+    "color": "white-black-brown",
+    "ownerID": "1"
   },
   {
     "id": "2",
@@ -29,7 +30,8 @@
     "weight": 7,
     "length": 18,
     "sex": "Male",
-    "color": "white-black"
+    "color": "white-black",
+    "ownerID": "2"
   },
   {
     "id": "3",
@@ -45,7 +47,8 @@
     "weight": 3,
     "length": 13,
     "sex": "Female",
-    "color": "white"
+    "color": "white",
+    "ownerID": "3"
   },
   {
     "id": "4",
@@ -61,7 +64,8 @@
     "weight": 6,
     "length": 16,
     "sex": "Male",
-    "color": "black"
+    "color": "black",
+    "ownerID": "4"
   },
   {
     "id": "5",
@@ -77,7 +81,8 @@
     "weight": 4,
     "length": 14,
     "sex": "Female",
-    "color": "brown"
+    "color": "brown",
+    "ownerID": "5"
   },
   {
     "id": "6",
@@ -93,7 +98,8 @@
     "weight": 8,
     "length": 19,
     "sex": "Female",
-    "color": "gray"
+    "color": "gray",
+    "ownerID": "97531"
   },
   {
     "id": "7",
@@ -109,6 +115,7 @@
     "weight": 5,
     "length": 15,
     "sex": "Female",
-    "color": "white-black-brown"
+    "color": "white-black-brown",
+    "ownerID": "86420"
   }
 ]

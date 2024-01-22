@@ -95,33 +95,53 @@ export default function Navbar() {
                   </svg>
                 </button>
                 <hr className="w-px h-6 bg-gray-300 sm:mx-3" />
-                <button
-                  type="button"
-                  className="relative rounded-lg bg-white dark:bg-blacke p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-rede hover:text-red-600 
-                  text-base fond-bold"
-                >
-                  <Link
-                    to="/login"
-                    className="text-base font-semibold px-2 py-1"
-                  >
-                    Log in
-                    <span className="absolute -inset-1.5" />
-                  </Link>
-                  <span className="sr-only">Log in</span>
-                </button>
-                <button
-                  type="button"
-                  className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
-                >
-                  <Link
-                    to="/signup"
-                    className="text-base font-semibold px-2 py-1"
-                  >
-                    Sign up
-                    <span className="absolute -inset-1.5" />
-                    <span className="sr-only">Sign up</span>
-                  </Link>
-                </button>
+                {localStorage.getItem('isLogged') === 'true' ? (
+                  <div className=" inline-flex items-center">
+                    <img
+                      src="https://randomuser.me/api/portraits/men/75.jpg"
+                      alt=""
+                      className="rounded-full relative h-10"
+                    />
+                    <Link
+                      to="/profile"
+                      className="text-base font-semibold px-2 py-1"
+                    >
+                      <span className="text-rede text-xl font-bold hover:text-red-800">
+                        My account
+                      </span>
+                    </Link>
+                  </div>
+                ) : (
+                  <div>
+                    <button
+                      type="button"
+                      className="relative rounded-lg bg-white dark:bg-blacke p-2 hover:bg-gray-100 dark:hover:bg-gray-700 text-rede hover:text-red-600 
+                    text-base fond-bold"
+                    >
+                      <Link
+                        to="/login"
+                        className="text-base font-semibold px-2 py-1"
+                      >
+                        Log in
+                        <span className="absolute -inset-1.5" />
+                      </Link>
+                      <span className="sr-only">Log in</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="relative rounded-lg bg-rede p-2 hover:bg-gray-100 text-white hover:text-red-600 ml-4"
+                    >
+                      <Link
+                        to="/signup"
+                        className="text-base font-semibold px-2 py-1"
+                      >
+                        Sign up
+                        <span className="absolute -inset-1.5" />
+                        <span className="sr-only">Sign up</span>
+                      </Link>
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
           </div>

@@ -23,7 +23,7 @@ export function CustomPicker({
   label: string;
 }) {
   const [selected, setSelected] = useState(items[0]);
-
+  console.log(selected.color);
   return (
     <div className="relative mt-1">
       <Listbox value={selected} onChange={setSelected}>
@@ -90,7 +90,6 @@ export function CustomPicker({
     </div>
   );
 }
-
 export function ColorPet() {
   return <CustomPicker items={colors} label="Color" />;
 }

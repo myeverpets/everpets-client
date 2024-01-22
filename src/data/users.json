@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "johndoe@example.com",
+      "phone": "1234567890",
+      "photo": "https://randomuser.me/api/portraits/men/75.jpg",
+      "password": "password123",
+      "isEmailVerified": true,
+      "isPhoneVerified": true
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "janesmith@example.com",
+      "phone": "9876543210",
+      "photo": "https://randomuser.me/api/portraits/men/76.jpg",
+      "password": "password456",
+      "isEmailVerified": false,
+      "isPhoneVerified": true
+    },
+    {
+      "id": 3,
+      "firstName": "User",
+      "lastName": "3",
+      "email": "user3@example.com",
+      "phone": "1111111111",
+      "photo": "https://randomuser.me/api/portraits/men/77.jpg",
+      "password": "password789",
+      "isEmailVerified": true,
+      "isPhoneVerified": false
+    },
+    {
+      "id": 4,
+      "firstName": "User",
+      "lastName": "4",
+      "email": "user4@example.com",
+      "phone": "2222222222",
+      "photo": "https://randomuser.me/api/portraits/men/78.jpg",
+      "password": "passwordabc",
+      "isEmailVerified": false,
+      "isPhoneVerified": false
+    },
+    {
+      "id": 5,
+      "firstName": "User",
+      "lastName": "5",
+      "email": "user5@example.com",
+      "phone": "3333333333",
+      "photo": "https://randomuser.me/api/portraits/men/79.jpg",
+      "password": "passwordxyz",
+      "isEmailVerified": true,
+      "isPhoneVerified": true
+    },
+    {
+      "id": 6,
+      "firstName": "User",
+      "lastName": "6",
+      "email": "user6@example.com",
+      "phone": "4444444444",
+      "photo": "https://randomuser.me/api/portraits/men/80.jpg",
+      "password": "password123",
+      "isEmailVerified": false,
+      "isPhoneVerified": true
+    },
+    {
+      "id": 7,
+      "firstName": "User",
+      "lastName": "7",
+      "email": "user7@example.com",
+      "phone": "5555555555",
+      "photo": "https://randomuser.me/api/portraits/men/81.jpg",
+      "password": "password456",
+      "isEmailVerified": true,
+      "isPhoneVerified": false
+    },
+    {
+      "id": 8,
+      "firstName": "User",
+      "lastName": "8",
+      "email": "user8@example.com",
+      "phone": "6666666666",
+      "photo": "https://randomuser.me/api/portraits/men/82.jpg",
+      "password": "password789",
+      "isEmailVerified": false,
+      "isPhoneVerified": false
+    },
+    {
+      "id": 9,
+      "firstName": "User",
+      "lastName": "9",
+      "email": "user9@example.com",
+      "phone": "7777777777",
+      "photo": "https://randomuser.me/api/portraits/men/83.jpg",
+      "password": "passwordabc",
+      "isEmailVerified": true,
+      "isPhoneVerified": true
+    },
+    {
+      "id": 10,
+      "firstName": "User",
+      "lastName": "10",
+      "email": "user10@example.com",
+      "phone": "8888888888",
+      "photo": "https://randomuser.me/api/portraits/men/84.jpg",
+      "password": "passwordxyz",
+      "isEmailVerified": false,
+      "isPhoneVerified": true
+    }
+  ]
+}
