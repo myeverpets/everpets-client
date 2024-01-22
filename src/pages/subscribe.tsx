@@ -2,7 +2,7 @@ export default function Subscribe() {
   return (
     <>
       <div>
-        <h1 className="text-lg font-bold text-center lg:text-2xl">
+        <h1 className="text-lg font-bold text-center lg:text-2xl dark:text-white">
           Join 31,000+ other and never miss <br /> out on new cats, dogs, and
           more.
         </h1>
