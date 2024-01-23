@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import getDistance from '../utils/distance';
 import { useGeolocated } from 'react-geolocated';
 import PetInfo from './pet-info';
-import ModalOK from '../components/modals';
+import { ModalOK } from '../components/modals';
 
 interface Pet {
   id: number;
@@ -116,7 +116,7 @@ export default function Card() {
                 </div>
                 <div className="grid flex-col mt-4">
                   <button
-                    className="bg-rede text-white font-bold py-2 px-4 rounded-lg"
+                    className="bg-rede text-white font-bold py-2 px-4 rounded-lg hover:scale-110"
                     onClick={() => setShowModal(true)}
                   >
                     Contact now

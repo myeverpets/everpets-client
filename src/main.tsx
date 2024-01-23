@@ -13,6 +13,7 @@ import ForgotPassword from './pages/forgot-password-page.tsx';
 import VerificationCode from './pages/verification-code-page.tsx';
 import SetNewPassword from './pages/set-new-password-page.tsx';
 import AccountPage from './pages/account-page.tsx';
+import CardCreatePage from './pages/card-create-page.tsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: '/card/:id',
     element: <CardPage />,
+  },
+  {
+    path: '/card-create',
+    element: <CardCreatePage />,
   },
   {
     path: '/signup',

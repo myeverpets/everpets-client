@@ -1,4 +1,5 @@
 import { PiDogLight, PiCatLight, PiAlienLight } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
 
 export default function Category() {
   return (
@@ -25,8 +26,10 @@ export default function Category() {
           id="HMB"
           className="col-span-1 bg-white dark:bg-blacke drop-shadow-lg dark:drop-shadow-lgL rounded-lg flex justify-center items-center align-stretch flex-col h-max py-[42px] hover:bg-gray-100 dark:hover:bg-blacke dark:hover:scale-110"
         >
-          <PiAlienLight className="size-40 content-center" />
-          <h2 className="font-bold text-center">Others</h2>
+          <Link to="/category">
+            <PiAlienLight className="size-40 content-center" />
+            <h2 className="font-bold text-center">Others</h2>
+          </Link>
         </button>
       </div>
     </div>
