@@ -12,6 +12,9 @@ export default function CardCreatePage() {
         </h1>
       </div>
       <CardCreate />
+      <button className="relative flex bg-rede text-white font-bold py-2 px-4 rounded-lg mx-auto hover:bg-red-700 hover:scale-110">
+        Create
+      </button>
       <Footer />
     </>
   );
