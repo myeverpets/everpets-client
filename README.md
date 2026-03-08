@@ -1,2 +1,19 @@
-## EverPets Client
-EverPets is designed to connect pet seekers with pets in need of a loving home.
+# EverPets
+
+A modern web application built with React, TypeScript, and TailwindCSS. 
+
+### 🚀 Features
+- Responsive design using TailwindCSS.
+- Interactive UI components.
+- Integrated TypeScript for type safety.
+
+### 🛠 Tech Stack
+- React.js
+- TypeScript
+- TailwindCSS
+- Vite
+
+### 💻 Key Contributions
+- Designed and implemented the user interface.
+- Developed frontend components using React and TypeScript.
+- Configured TailwindCSS for efficient styling.
